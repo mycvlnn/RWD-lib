@@ -1,10 +1,40 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.col {
+
+/* Category */
+.category__list {
+    list-style: none;
+}
+
+.category__link {
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    color: #333;
+    padding: 10px 0;
+}
+
+.product-wrap {
+    margin-top: 50px;
+    padding: 0 6px;
+}
+
+.item {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: orange;
+    color: #fff;
+    height: 300px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
-    background-color: #ccc;
-    background-clip: content-box;
-    margin-top: 8px;
-    margin-bottom: 8px;
+}
+
+@media (min-width: 740px) {
+    .product-wrap {
+        padding: 0;
+    }
 }
