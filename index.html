@@ -5,55 +5,400 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Responsive web design</title>
-        <link rel="stylesheet" href="./responsive.css" />
-        <link rel="stylesheet" href="./styles.css" />
+
+        <!-- Font  -->
+        <!-- Roboto font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/styles/reset.css" />
+        <link rel="stylesheet" href="./assets/styles/responsive.css" />
+        <link rel="stylesheet" href="./assets/styles/styles.css" />
     </head>
 
     <body>
-        <div class="product-wrap">
-            <div class="grid wide">
-                <div class="row">
-                    <div class="col l-2 m-2 c-0">
-                        <div class="category">
-                            <ul class="category__list">
-                                <li class="category__item">
-                                    <a href="#!" class="category__link">Category Item 1</a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="#!" class="category__link">Category Item 2</a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="#!" class="category__link">Category Item 3</a>
-                                </li>
-                                <li class="category__item">
-                                    <a href="#!" class="category__link">Category Item 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col l-10 m-10 c-12">
-                        <div class="row sm-gutter">
-                            <div class="col l-2-4 m-4 c-6">
-                                <div class="item">Item 1</div>
-                            </div>
-                            <div class="col l-2-4 m-4 c-6">
-                                <div class="item">Item 2</div>
-                            </div>
-                            <div class="col l-2-4 m-4 c-6">
-                                <div class="item">Item 3</div>
-                            </div>
-                            <div class="col l-2-4 m-4 c-6">
-                                <div class="item">Item 4</div>
-                            </div>
-                            <div class="col l-2-4 m-4 c-6">
-                                <div class="item">Item 5</div>
-                            </div>
-                            <div class="col l-2-4 m-4 c-6">
-                                <div class="item">Item 6</div>
-                            </div>
-                        </div>
-                    </div>
+        <div id="app">
+            <aside id="sidebar">
+                <a href="#!" class="brand-logo">
+                    <img src="./assets/img/brand.png" alt="Collection UI" class="brand-logo__img" />
+                </a>
+
+                <a href="#!" class="social-link">
+                    <svg
+                        class="social-link__icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                        />
+                    </svg>
+                    <span class="social-link__text">Twitter</span>
+                </a>
+
+                <div class="input-search">
+                    <input
+                        type="text"
+                        id="input-search"
+                        class="input-search__input"
+                        placeholder="Filter"
+                    />
+                    <label for="input-search">
+                        <svg
+                            class="input-search__icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            fill="#ccc"
+                        >
+                            <path
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                            />
+                        </svg>
+                    </label>
                 </div>
+                <ol class="category-list">
+                    <li class="category-item">
+                        <a href="#!" class="category-item__link">Sign Up</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#!" class="category-item__link">Checkout</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#!" class="category-item__link">Landing Page</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#!" class="category-item__link">Calculator</a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#!" class="category-item__link">App Icon</a>
+                    </li>
+                </ol>
+            </aside>
+
+            <div id="main-wrapper">
+                <!-- Chứa phần header và phần main content -->
+                <header id="header">
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item navbar__item--badge">
+                                <a href="#!" class="navbar__link"> Daily Designer Inspiration </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Newsletter</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">About</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <main id="main-content">
+                    <div class="grid story-book">
+                        <h2 class="story-book__heading">Designs (14426)</h2>
+                        <p class="story-book__desc">
+                            You can see the designs from the ui challenge below, we extended it with
+                            the components we found, updating daily. See stats for frequency.
+                        </p>
+                        <div class="row sm-gutter design-list">
+                            <div class="col l-12 m-0 c-0 campaigns">
+                                <div class="row">
+                                    <div class="col l-4">
+                                        <a href="#!" class="campaign-item">
+                                            🖐 Free AI Paraphraser
+                                        </a>
+                                    </div>
+                                    <div class="col l-4">
+                                        <a href="#!" class="campaign-item">👉 Meet Play</a>
+                                    </div>
+                                    <div class="col l-4">
+                                        <a href="#!" class="campaign-item">👉 Free ChatGPT</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 1 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4417684/daily-ui-landing-page-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://api.usepanda.com/v1/medias/632d11a5f1287945cadeaf4b"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4406054/github-redesign-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/3994557/transaction-calendar-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4398377/notes-widget-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 6 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4166275/10-k-website-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 7 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4031090/login-signup-form-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 8 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4031090/login-signup-form-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 9 -->
+
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4028202/credit-card-checkout-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Item 10 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4414691/foody-web-landing-page-design-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Item 1 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4417684/daily-ui-landing-page-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://api.usepanda.com/v1/medias/632d11a5f1287945cadeaf4b"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4406054/github-redesign-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/3994557/transaction-calendar-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="col l-2-4 m-4 c-12 design">
+                                <article class="design-item">
+                                    <a href="#!" class="design-item__thumb">
+                                        <img
+                                            src="https://static.collectui.com/shots/4398377/notes-widget-medium"
+                                            alt="Landing Page"
+                                            class="design-item__img"
+                                        />
+                                    </a>
+                                    <div class="design-item__content">
+                                        <h3 class="design-item__name">
+                                            <a href="#!">Landing Page</a>
+                                        </h3>
+                                        <a href="#!" class="design-item__author">by ChrisLee</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <footer id="footer">Footer section</footer>
             </div>
         </div>
     </body>
